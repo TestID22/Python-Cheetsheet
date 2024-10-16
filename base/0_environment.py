@@ -41,6 +41,17 @@ PyCharm
 When creating a new project, it will ask for the Python interpreter. 
 You can configure it from File > Settings > Project: <project_name> > Python Interpreter
 
+VENV: 
+это изолированное цифровое пространство, в котором вы можете установить свои собственные версии Python и пакеты, 
+отличные от тех, которые установлены в системе. Используется для изоляции зависимостей: 
+#myenv - is your env's name
+python -m venv myenv
+
+# to activate env:
+\venv\scripts\activate
+
+
+
 PIP Options: 
 Install SomePackage and its dependencies from PyPI using Requirement Specifiers
 - py -m pip install SomePackage            # latest version
