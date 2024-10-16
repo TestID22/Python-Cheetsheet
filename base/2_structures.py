@@ -1,9 +1,9 @@
 """
-Основные структуры данных
+Basic data structures
 """
-# 1. Как создать / изменить / удалить
-# 2. Изменяемые / неизменяемые объекты
-# 3. Основные методы базовых структур
+# 1. How to create / modify / delete
+# 2. Modifiable / immutable objects
+# 3. Basic methods of basic structures
 a = []
 a = list()
 a = [1] * 10
