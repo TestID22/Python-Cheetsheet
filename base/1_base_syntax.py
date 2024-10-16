@@ -1,10 +1,10 @@
 """
-Базовый синтаксис
+Basic Syntax
 """
 import typing
 
 
-# основные типы и структуры
+# Basic Data Types
 types = [
     ...,
     None,
@@ -20,20 +20,25 @@ types = [
 ]
 
 
-# основные операторы
-_ = 1 + 2
-_ = 1 - 2
-_ = 1 * 2
-_ = 1 ** 2
-_ = 1 / 2
-_ = 1 // 2
-_ = 1 % 2
-_ = 1 and 2
+# Basic Operators 
+_ = 1 + 2 Addition: adds two operands
+_ = 1 - 2 Subtraction: subtracts two operands
+_ = 1 * 2 Multiplication: multiplies two operands
+_ = 1 ** 2 Power: Returns first raised to power second
+
+There are two types of division operators: 
+-Float division
+-Floor division
+_ = 1 / 2 Division (float): divides the first operand by the second
+_ = 1 // 2 Division (floor): divides the first operand by the second
+
+_ = 1 % 2 Modulus: returns the remainder when the first operand is divided by the second
+_ = 1 and 2 
 _ = 1 or 2
 _ = 1 > 2 | 1 >= 2 | 1 < 2 | 1 <= 2
 
 
-# цикл for
+# FOR loop 
 for _ in types:
     pass
 
@@ -43,25 +48,25 @@ else:
     pass
 
 
-# Comprehensions
+# List Comprehensions
 a = [i for i in types]
 b = (i for i in types)
 c = {i for i in types if isinstance(i, typing.Hashable)}
 d = {str(i): i for i in types}
 
 
-# Присвоение, распаковка, срезы
+# Присвоение, распаковка, slice 
 e, *f, g = types
 h = [*f]
 _ = [1, 2, 3][:]
 _ = {**{}}
 
 
-# Утверждение assert
+# Assert
 assert h, 'test'
 
 
-# цикл while
+# While loop
 while a:
     a.pop()
 
@@ -71,7 +76,7 @@ else:
     pass
 
 
-# Функции
+# Functions
 def func(text: str, space: str, action: typing.Callable) -> None:
     if not text:
         return
@@ -81,15 +86,15 @@ def func(text: str, space: str, action: typing.Callable) -> None:
     print(space + action(text))
 
 
-# lambda функции
+# lambda func
 func('*' * 11, '', lambda text: ' '.join(i for i in text))
 
 
-# Декораторы
+# Decorators
 def decorator(multiplier: int):
 
     def dec(func: typing.Callable):
-        # Области видимости функции
+        # Variable scopes
         global a, b, c, d
         nonlocal multiplier
 
@@ -99,7 +104,7 @@ def decorator(multiplier: int):
         def wrap(*args, **kwargs):
             for _ in range(multiplier):
 
-                # Генераторы
+                # Generators
                 yield func(*args, **kwargs)
 
         return wrap
@@ -115,7 +120,7 @@ def f(num: int) -> int:
 qwe = [*f(1)]
 
 
-# Условия
+# Conditions
 if i := d.get(''):
     pass
 elif not (q := d.get(1)):
