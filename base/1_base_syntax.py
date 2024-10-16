@@ -86,8 +86,24 @@ def func(text: str, space: str, action: typing.Callable) -> None:
     print(space + action(text))
 
 
-# lambda func
+# lambda func 
+'''
+A lambda function is a small anonymous function.
+A lambda function can take any number of arguments, but can only have one expression.
+'''
+lambda arguments : expression
+
+a = lambda x: x + 10
+hello_user = lambda name: "Hello " + name
+
+command = lambda name_1, name_2, name_3, name_4: name_1 + name_2 + name_3 + name_4 + " are idiots"
 func('*' * 11, '', lambda text: ' '.join(i for i in text))
+Why should we use lambdas?
+
+1. Краткость, 2. анонимность (не нужно объявлять громоздкий def), 3. Использование внутри функций:
+
+ Лучшее применения когда мы используем лямбду в другой функции.
+# lambda func
 
 
 # Decorators
