@@ -11,15 +11,102 @@ types = [
     True, False, bool,
     1, int,
     1.1, float,
+    1j, complex,
     ' ', " ", """ """, f'', r'', str,
-    b'', bytes,
+    b'', bytes, bytearray, memoryview,
     [], list,
     (), tuple,
     {1, }, set,
     {}, dict
 ]
 
+Числовые значение: int, float, complex (decimal)
+x = 1    # int
+y = 2.8  # float
+z = 1j   # complex
+Строка: str 
+Последовательности: list, tuple (кортеж), range 
+mapping type: dict - ключ: значение
+наборы или множество , set: (),
 
+1) Text Type:	str
+2) Numeric Types:	int, float, complex
+3) Sequence Types:	list, tuple, range
+4) Mapping Type:	dict
+5) Set Types:	set, frozenset
+6) Boolean Type:	True, False, bool
+7) Binary Types:	bytes, bytearray, memoryview
+8) None Type:	NoneType
+9) ... -  элипсис, спец тип данныз который используется в многомерных массивах в Numpy
+
+range() - возвращает последовательность чисел, которые можно использовать в Loops. 0, 1, 2, 3, 4 
+range(start, stop, step)
+
+# Basic Data Types
+
+
+------------------------------------------------------------------------------------------------------------------
+# Types Casting, Conversion 
+"""
+Приведение типов = это процес преобразования одного типа данных в другой. 
+Есть два вида Неявный - когда интерпретатор может преобразовать Типы данных неявно, и Явный, когда мы должны указать тип в который мы хотим привести данные. 
+"""
+There are two type of types of Type Casting: 
+- Explicit - Явное приведение
+- Python Implicit Type Conversion и неявное приедение типов.
+
+Implicit Type Casting happens under the hood 
+# There can be two types of Type Casting: Explicit and Implicit
+# Implicit
+a = 1
+print(type(a))
+# integer
+
+b = 1 + 2.0
+print(type(b))
+# float 
+
+c = 1j
+print(type(c))
+# complex
+
+Explicit type - требует явного вмешательства пользователя
+Mainly type casting can be done with these data type functions:
+
+int(): Python Int() function take float or string as an argument and returns int type object.
+float(): Python float() function take int or string as an argument and return float type object.
+str(): Python str() function takes float or int as an argument and returns string type object.
+
+a = 1
+b = float(1)
+print(type(b))
+
+b = str(a)
+print(type(b))
+
+b = int(a)
+print(type(b))\
+
+# float to int
+a = 1.9
+b = int(a)
+print(b)
+print(type(b))
+# Пайтон округлит до целого: вывод будет 1, а не 2
+# Тип буде int
+
+What is the Difference Between Type Casting and Type Conversion?
+Type casting and type conversion are terms that can be used interchangeably to refer to changing data from one type to another. 
+However, some distinctions are often made:
+
+Type Conversion: This can be seen as a broader term that encompasses both implicit and explicit type changes.
+
+Type Casting: Often refers specifically to explicit conversion, where the conversion is clearly specified in the code.
+# Types Casting, Conversion 
+------------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------------------
 # Basic Operators 
 _ = 1 + 2 Addition: adds two operands
 _ = 1 - 2 Subtraction: subtracts two operands
@@ -36,6 +123,8 @@ _ = 1 % 2 Modulus: returns the remainder when the first operand is divided by th
 _ = 1 and 2 
 _ = 1 or 2
 _ = 1 > 2 | 1 >= 2 | 1 < 2 | 1 <= 2
+# Basic Operators 
+------------------------------------------------------------------------------------------------------------------
 
 
 # FOR loop 
