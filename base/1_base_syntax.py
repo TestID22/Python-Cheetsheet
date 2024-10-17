@@ -108,6 +108,19 @@ Type Casting: Often refers specifically to explicit conversion, where the conver
 
 ------------------------------------------------------------------------------------------------------------------
 # Basic Operators 
+# OPERATORS: These are the special symbols. Eg- + , * , /, etc.
+# OPERAND: It is the value on which the operator is applied.
+
+# Precedence of Arithmetic Operators in Python
+# The precedence of Arithmetic Operators in Python is as follows:
+# P – Parentheses (скобки)
+# E – Exponentiation (возведение в степерь) 
+# M – Multiplication (Multiplication and division have the same precedence) Деление (/) и умножение (*) имеют одинаковый приоритет и выполняются слева направо.
+# D – Division 
+# A – Addition (Addition and subtraction have the same precedence)
+# S – Subtraction
+
+
 _ = 1 + 2 Addition: adds two operands
 _ = 1 - 2 Subtraction: subtracts two operands
 _ = 1 * 2 Multiplication: multiplies two operands
@@ -120,9 +133,95 @@ _ = 1 / 2 Division (float): divides the first operand by the second
 _ = 1 // 2 Division (floor): divides the first operand by the second
 
 _ = 1 % 2 Modulus: returns the remainder when the first operand is divided by the second
+
+# Comparison of Python Operators
+>, <, ==, !=, >=, <=
+_ = 1 > 2 | 1 >= 2 | 1 < 2 | 1 <= 2
+
+# Logical Operators
 _ = 1 and 2 
 _ = 1 or 2
-_ = 1 > 2 | 1 >= 2 | 1 < 2 | 1 <= 2
+_ = a not b 
+
+# Bitwise Operators in Python
+# These operations manipulate the binary representations of the numbers.
+&, |, ~, >>, <<, ^
+
+= assign value 
++=
+-= 
+*= 
+/=
+%= 
+**=
+ 
+# Identity Operators in Python
+# In Python, is and is not are the identity operators both are used to check if two values are located on the same part of the memory. 
+# Two variables that are equal do not imply that they are identical. 
+
+copy and deepcopy
+# Copy - creates a new object that refers to old object - all changes are reflect on origin object
+# deepcopy - A deep copy creates a new object and recursively copies all objects found in the original,
+# meaning that the new object is entirely independent of the original.
+
+
+is          True if the operands are identical 
+is not      True if the operands are not identical 
+
+a = 10
+b = 20
+c = a
+True
+True
+
+print(a is not b)
+print(a is c)
+
+# Ternary Operator in Python
+Syntax :  [on_true] if [expression] else [on_false] 
+
+
+# Python – Star or Asterisk operator ( * )
+#Одинарная звёздочка (*)
+#В аргументах функций: Используется для передачи переменного количества аргументов. Аргументы будут собраны в кортеж.
+def my_function(*args):
+    for arg in args:
+        print(arg)
+
+my_function(1, 2, 3)  # Выводит: 1, 2, 3
+#При распаковке: Позволяет распаковывать итерируемые объекты в функции и списки.
+numbers = [1, 2, 3]
+print(*numbers) 
+# using asterisk
+def addition(*args):
+  return sum(args)
+
+print(addition(5, 10, 20, 6))
+
+
+# Двойная звёздочка (**)
+В аргументах функций: Используется для передачи переменного количества именованных аргументов. Аргументы будут собраны в словарь.
+def my_function(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+my_function(a=1, b=2)  # Выводит: a: 1, b: 2
+# Python – Star or Asterisk operator ( * )
+
+#Difference between ‘and’ and ‘&’ in Python
+and - is logical
+& - binary operator, используется для побитовых операций с целыми числами. Он сравнивает каждый бит двух чисел и возвращает новое число, где каждый бит равен 1, только если соответствующие биты обоих чисел равны 1.
+#Difference between ‘and’ and ‘&’ in Python
+
+# not Operator in Python | Boolean Logic
+
+# Ternary Operator in Python
+
+# Walrus Operator in Python 3.8
+
+# Increment += and Decrement -= Assignment Operators in Python
+
+
 # Basic Operators 
 ------------------------------------------------------------------------------------------------------------------
 

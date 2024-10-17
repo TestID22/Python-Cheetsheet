@@ -13,6 +13,13 @@ a.append(a)
 a.pop()
 a.extend(a)
 
+# Strings are IMUTABLE date types
+How to check 
+name = "Pavel"
+print(f'Id of the first objectL {id(name}")
+name = "test"
+print(f" it's another object: {id(name}")
+
 # Access by index. Accessing elements of String
 a = "Hello, World!"
 print(a[1])
