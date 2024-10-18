@@ -206,11 +206,14 @@ def my_function(**kwargs):
         print(f"{key}: {value}")
 
 my_function(a=1, b=2)  # Выводит: a: 1, b: 2
+<<<<<<< HEAD
 # Присвоение, распаковка, slice 
 e, *f, g = types
 h = [*f]
 _ = [1, 2, 3][:]
 _ = {**{}}
+=======
+>>>>>>> 65cefaf4cca09e11acd892fe9068fa8bb69b1114
 # Python – Star or Asterisk operator ( * )
 
 #Difference between ‘and’ and ‘&’ in Python
