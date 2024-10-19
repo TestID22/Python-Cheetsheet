@@ -177,11 +177,10 @@ True
 print(a is not b)
 print(a is c)
 
-# Ternary Operator in Python
-Syntax :  [on_true] if [expression] else [on_false] 
 
 
-# Python – Star or Asterisk operator ( * )
+
+# Python – Star or Asterisk operator ( * )  --------------------------------------------------------------------------------------------------------------------------------------------------> 
 #Одинарная звёздочка (*)
 #В аргументах функций: Используется для передачи переменного количества аргументов. Аргументы будут собраны в кортеж.
 def my_function(*args):
@@ -213,22 +212,54 @@ h = [*f]
 _ = [1, 2, 3][:]
 _ = {**{}}
 =======
->>>>>>> 65cefaf4cca09e11acd892fe9068fa8bb69b1114
-# Python – Star or Asterisk operator ( * )
+# Python – Star or Asterisk operator ( * )  --------------------------------------------------------------------------------------------------------------------------------------------------> 
 
-#Difference between ‘and’ and ‘&’ in Python
+
+#Difference between ‘and’ and ‘&’ in Python --------------------------------------------------------------------------------------------------------------------------------------------------> 
 and - is logical
 & - binary operator, используется для побитовых операций с целыми числами. Он сравнивает каждый бит двух чисел и возвращает новое число, где каждый бит равен 1, только если соответствующие биты обоих чисел равны 1.
-#Difference between ‘and’ and ‘&’ in Python
+#Difference between ‘and’ and ‘&’ in Python  --------------------------------------------------------------------------------------------------------------------------------------------------> 
 
-# not Operator in Python | Boolean Logic
 
-# Ternary Operator in Python
+# not Operator in Python | Boolean Logic --------------------------------------------------------------------------------------------------------------------------------------------------> 
+# Ключевое слово not в Python - это логический оператор, который обычно используется для определения отрицания или противоположного булевого значения операнда.
+# In the above example, we saw that treating all the data types as operands with not keyword., ‘not’ treats true to all the data types who had value and false to those who were empty value.
+a = False
+print(not a)
+# not Operator in Python | Boolean Logic  --------------------------------------------------------------------------------------------------------------------------------------------------> 
 
-# Walrus Operator in Python 3.8
 
-# Increment += and Decrement -= Assignment Operators in Python
+# Ternary Operator in Python --------------------------------------------------------------------------------------------------------------------------------------------------> 
+Syntax :  [on_true] if [expression] else [on_false] 
+Syntax: true_value if condition else false_value
+a = 10
+b = 20
 
+min = "a is minimum" if a < b else "b is minimum"  # 
+
+a = not True
+print("Test True") if a is True else  print("test2")
+
+# Ternary Operator in Python --------------------------------------------------------------------------------------------------------------------------------------------------> 
+
+
+# Walrus Operator in Python 3.8 -------------------------------------------------------------------------------------------------------------------------------------------------->
+#Этот оператор позволяет присвоить значение переменной внутри выражения, что может быть полезно для сокращения и оптимизации кода.
+while (line := input()) != "exit":
+    print(f"Вы ввели: {line}")
+
+
+doubles = [double for i in range(10) if (double := i * 2) > 10]
+print(doubles)
+# Walrus Operator in Python 3.8 -------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+# Increment += and Decrement -= Assignment Operators in Python -> --------------------------------------------------------------------------------------------------------------------------------------------------> 
+ Python does not have ++ or -- operators
+x = 5
+x += 1  # Increment by 1
+print(x)  # Output will be 6  TODO CHECK id(x)
+# Increment += and Decrement -= Assignment Operators in Python --------------------------------------------------------------------------------------------------------------------------------------------------> 
 
 # Basic Operators 
 ------------------------------------------------------------------------------------------------------------------
