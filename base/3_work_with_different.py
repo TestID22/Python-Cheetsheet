@@ -78,7 +78,7 @@ uid = uuid.uuid4()
 
 
 # Работа с os
-path = os.path.join(__file__, 'qweqwe')
+path = os.path.join(__file__, 'subFolder')
 os.getenv('ENV_NAME')
 
 os.system('echo 123')

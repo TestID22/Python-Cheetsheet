@@ -205,7 +205,7 @@ def my_function(**kwargs):
         print(f"{key}: {value}")
 
 my_function(a=1, b=2)  # Выводит: a: 1, b: 2
-<<<<<<< HEAD
+
 # Присвоение, распаковка, slice 
 e, *f, g = types
 h = [*f]
