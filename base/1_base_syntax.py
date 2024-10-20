@@ -3,7 +3,7 @@ Basic Syntax
 """
 import typing
 
-
+------------------------------------------------------------------------------------------------------------------>
 # Basic Data Types
 types = [
     ...,
@@ -45,7 +45,7 @@ range(start, stop, step)
 # Basic Data Types
 
 
-------------------------------------------------------------------------------------------------------------------
+
 # Types Casting, Conversion 
 """
 Приведение типов = это процес преобразования одного типа данных в другой. 
@@ -102,11 +102,11 @@ However, some distinctions are often made:
 Type Conversion: This can be seen as a broader term that encompasses both implicit and explicit type changes.
 
 Type Casting: Often refers specifically to explicit conversion, where the conversion is clearly specified in the code.
-# Types Casting, Conversion 
-------------------------------------------------------------------------------------------------------------------
+# data types, Types Casting, Conversion 
+------------------------------------------------------------------------------------------------------------------>
 
 
-------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------>
 # Basic Operators 
 # OPERATORS: These are the special symbols. Eg- + , * , /, etc.
 # OPERAND: It is the value on which the operator is applied.
@@ -180,7 +180,7 @@ _ = a not b
 # Two variables that are equal do not imply that they are identical. 
 
 copy and deepcopy
-# Copy - creates a new object that refers to old object - all changes are reflect on origin object
+# Copy - creates a new object that refers to old object - all changes are reflected on origin object
 # deepcopy - A deep copy creates a new object and recursively copies all objects found in the original,
 # meaning that the new object is entirely independent of the original.
 
@@ -200,7 +200,7 @@ print(a is c)
 
 
 
-# Python – Star or Asterisk operator ( * )  --------------------------------------------------------------------------------------------------------------------------------------------------> 
+# Python – Star or Asterisk operator ( * )  
 #Одинарная звёздочка (*)
 #В аргументах функций: Используется для передачи переменного количества аргументов. Аргументы будут собраны в кортеж.
 def my_function(*args):
@@ -232,24 +232,24 @@ h = [*f]
 _ = [1, 2, 3][:]
 _ = {**{}}
 =======
-# Python – Star or Asterisk operator ( * )  --------------------------------------------------------------------------------------------------------------------------------------------------> 
+# Python – Star or Asterisk operator ( * )  
 
 
-#Difference between ‘and’ and ‘&’ in Python --------------------------------------------------------------------------------------------------------------------------------------------------> 
+#Difference between ‘and’ and ‘&’ in Python 
 and - is logical
 & - binary operator, используется для побитовых операций с целыми числами. Он сравнивает каждый бит двух чисел и возвращает новое число, где каждый бит равен 1, только если соответствующие биты обоих чисел равны 1.
-#Difference between ‘and’ and ‘&’ in Python  --------------------------------------------------------------------------------------------------------------------------------------------------> 
+#Difference between ‘and’ and ‘&’ in Python  
 
 
-# not Operator in Python | Boolean Logic --------------------------------------------------------------------------------------------------------------------------------------------------> 
+# not Operator in Python | Boolean Logic 
 # Ключевое слово not в Python - это логический оператор, который обычно используется для определения отрицания или противоположного булевого значения операнда.
 # In the above example, we saw that treating all the data types as operands with not keyword., ‘not’ treats true to all the data types who had value and false to those who were empty value.
 a = False
 print(not a)
-# not Operator in Python | Boolean Logic  --------------------------------------------------------------------------------------------------------------------------------------------------> 
+# not Operator in Python | Boolean Logic  
 
 
-# Ternary Operator in Python --------------------------------------------------------------------------------------------------------------------------------------------------> 
+# Ternary Operator in Python
 Syntax :  [on_true] if [expression] else [on_false] 
 Syntax: true_value if condition else false_value
 a = 10
@@ -259,10 +259,10 @@ min = "a is minimum" if a < b else "b is minimum"  #
 
 a = not True
 print("Test True") if a is True else  print("test2")
-# Ternary Operator in Python --------------------------------------------------------------------------------------------------------------------------------------------------> 
+# Ternary Operator in Python 
 
 
-# Walrus Operator in Python 3.8 -------------------------------------------------------------------------------------------------------------------------------------------------->
+# Walrus Operator in Python 3.8 
 #Этот оператор позволяет присвоить значение переменной внутри выражения, что может быть полезно для сокращения и оптимизации кода.
 while (line := input()) != "exit":
     print(f"Вы ввели: {line}")
@@ -270,27 +270,73 @@ while (line := input()) != "exit":
 
 doubles = [double for i in range(10) if (double := i * 2) > 10]
 print(doubles)
-# Walrus Operator in Python 3.8 -------------------------------------------------------------------------------------------------------------------------------------------------->
+# Walrus Operator in Python 3.8 
 
 
-# Increment += and Decrement -= Assignment Operators in Python -> --------------------------------------------------------------------------------------------------------------------------------------------------> 
+# Increment += and Decrement -= Assignment Operators in Python -> 
  Python does not have ++ or -- operators
 x = 5
 x += 1  # Increment by 1
 print(x)  # Output will be 6  TODO CHECK id(x)
-# Increment += and Decrement -= Assignment Operators in Python --------------------------------------------------------------------------------------------------------------------------------------------------> 
+# Increment += and Decrement -= Assignment Operators in Python 
 
 # Basic Operators 
 ------------------------------------------------------------------------------------------------------------------
 
 
+
+
+
 # Conditions, Control Flow. --------------------------------------------------------------------------------------------------------------------------------------------------> 
+# Conditional statements in Python play a key role in determining the direction of program execution.
+
+# Python If Statement
+# Python If Else Statement
+# Python Nested If Statement
+# Python Elif
+# Ternary Statement | Short Hand If Else Statement
+
 if i := d.get(''):
     pass
 elif not (q := d.get(1)):
     pass
 else:
     ...
+
+# Using the function on odd elements of the list
+newList = [i**2 for i in List if i & 1]
+
+
+# Python program to illustrate short hand if
+i = 10
+if i < 15: print("i is less than 15")
+
+# ternary
+Syntax :  [on_true] if [expression] else [on_false] 
+Syntax: true_value if condition else false_value
+
+
+#hat are the different types of control statements in Python?
+# In Python, control statements are used to alter the flow of execution based on specific conditions or looping requirements. The main types of control statements are:
+Conditional statements: if, else, elif
+Looping statements: for, while
+Control flow statements: break, continue, pass, return
+
+
+# while 
+while expression:
+    statement(s)
+
+# While loop
+while a:
+    a.pop()
+
+while a:
+    break
+else:
+    pass
+
+
 
 
 # match qwe:
@@ -308,19 +354,11 @@ for _ in types:
     break
 else:
     pass
+    
+    
 
 
-
-# While loop
-while a:
-    a.pop()
-
-while a:
-    break
-else:
-    pass
-
-# Conditions --------------------------------------------------------------------------------------------------------------------------------------------------> 
+# Conditions, Control Flow. --------------------------------------------------------------------------------------------------------------------------------------------------> 
 
 
 
