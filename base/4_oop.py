@@ -14,6 +14,12 @@ Encapsulation in Python
 Inheritance in Python
 Data Abstraction in Python
 
+What is a class
+What is "self"
+What __dict__ attribute means
+How to declare a class
+How to inherit from a class
+Difference between class and an instance of it
 """
 import typing
 
