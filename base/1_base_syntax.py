@@ -28,7 +28,7 @@ z = 1j   # complex
 Последовательности: list, tuple (кортеж), range 
 mapping type: dict - ключ: значение
 наборы или множество , set: (),
-
+# key=data_types
 1) Text Type:	str
 2) Numeric Types:	int, float, complex
 3) Sequence Types:	list, tuple, range
@@ -72,7 +72,7 @@ print(type(c))
 
 Explicit type - требует явного вмешательства пользователя
 Mainly type casting can be done with these data type functions:
-
+# key=casting
 int(): Python Int() function take float or string as an argument and returns int type object.
 float(): Python float() function take int or string as an argument and return float type object.
 str(): Python str() function takes float or int as an argument and returns string type object.
@@ -150,9 +150,14 @@ There are two types of division operators:
 -Float division
 -Floor division
 _ = 1 / 2 Division (float): divides the first operand by the second
-_ = 1 // 2 Division (floor): divides the first operand by the second
+_ = 1 // 2 Division (floor): divides the first operand by the second returns INTEGER
+5//2 = 2
 
 _ = 1 % 2 Modulus: returns the remainder when the first operand is divided by the second
+Деление по модулю возвращает остаток от деления,
+10 % 3 = 1 
+10 % 2 = 0
+10 % 5 = 0
 
 # Comparison of Python Operators
 >, <, ==, !=, >=, <=
@@ -303,7 +308,7 @@ elif not (q := d.get(1)):
 else:
     ...
 
-# Using the function on odd elements of the list
+# Using the function on odd elements of the list comperhansive 
 newList = [i**2 for i in List if i & 1]
 
 
@@ -316,16 +321,39 @@ Syntax :  [on_true] if [expression] else [on_false]
 Syntax: true_value if condition else false_value
 
 
-#hat are the different types of control statements in Python?
+# LOOPS
+# what are the different types of control statements in Python?
 # In Python, control statements are used to alter the flow of execution based on specific conditions or looping requirements. The main types of control statements are:
-Conditional statements: if, else, elif
-Looping statements: for, while
-Control flow statements: break, continue, pass, return
+# -- Conditional statements: if, else, elif
+# -- Looping statements: for, while
+# -- Control flow statements: break, continue, pass, return
+# Difference between for loop and while loop in Python
+# while зацыкленно выполняет кусок кода, фор нужен для интеации
 
 
-# while 
+# while (key=WHILE)
 while expression:
     statement(s)
+
+# the loop runs while the expression is True
+count = 0
+while (count < 3):
+    count = count + 1
+    print("Hello Geek")
+
+# Syntax of While Loop with else statement:
+while condition:
+     # execute these statements
+else:
+     # execute these statements
+counter = 5 
+while counter >= 0:
+    print(counter)
+    counter -= 1
+else:
+    print('end of loop')
+# else returns when loop is finished
+
 
 # While loop
 while a:
@@ -337,6 +365,89 @@ else:
     pass
 
 
+# For is used for sequential traversal. Использует для обхода последовательности.
+# Последовательность - это упорядоченные коллеции элементов, под упорядоченными имеется ввиду остортированные.
+# - Последовательности: string, list, set, tuple, dict 
+# В Python последовательности, которые реализуют интерфейс __iter__ и __next__, называются итерируемыми объектами. 
+# Это позволяет использовать их в циклах и других конструкциях, которые требуют итерации.
+
+# FOR loop 
+# The underscore _ is often used as a variable name when you want to indicate that the variable is a placeholder and its value is not needed. 
+# This is a common Python convention when the loop variable is not used.
+for _ in types:
+    pass
+
+
+for type_name in types:
+    print(type_name)  # This will print each type in the types list
+
+#The code uses a Python for loop that iterates over the values from 0 to 3 (not including 4), as specified by the range(0, n) construct. 
+#It will print the values of ‘i' in each iteration of the loop.
+n = 4
+for i in range(0, n):
+    print(i)
+
+
+for _ in types:
+    break
+else:
+    pass
+
+list = ["geeks", "for", "geeks"]
+for index in range(len(list)):
+    print(list[index])
+else:
+    print("Inside Else Block")    
+    
+
+# Nested Loops in Python 
+rows = 5
+cols = 10
+
+for y in range(rows): # берём первый элемент из rows - 0
+    for x in range(cols): # и проходим по всем элементам второго объекта (0, 0) (1, 0)
+        print(f"({x}, {y})", end=' ') # end=' ': Это позволяет выводить все координаты в одной строке с пробелами между ними. После завершения внутреннего цикла, print() без аргументов переходит на новую строку.
+    print() #  print()  # Переход на новую строку после каждой строки
+    
+(0, 0) (1, 0) (2, 0) (3, 0) (4, 0) (5, 0) (6, 0) (7, 0) (8, 0) (9, 0) 
+(0, 1) (1, 1) (2, 1) (3, 1) (4, 1) (5, 1) (6, 1) (7, 1) (8, 1) (9, 1) 
+(0, 2) (1, 2) (2, 2) (3, 2) (4, 2) (5, 2) (6, 2) (7, 2) (8, 2) (9, 2)
+(0, 3) (1, 3) (2, 3) (3, 3) (4, 3) (5, 3) (6, 3) (7, 3) (8, 3) (9, 3)
+(0, 4) (1, 4) (2, 4) (3, 4) (4, 4) (5, 4) (6, 4) (7, 4) (8, 4) (9, 4)
+
+
+# Loop Control Statements
+# continue, break, return, pass 
+
+# The continue statement in Python returns the control to the beginning of the loop.
+for y in range(rows):
+    for x in range(cols):
+        if x == 0: 
+            continue
+        print(f"({x}, {y})", end=' ')
+    print()
+
+# Break Statement
+for i in "Elliot": 
+    if i =='i':
+        break
+    print(i)
+else:
+    print("we got i letter")
+
+
+# manualy
+fruits = ["apple", "orange", "kiwi"]
+iter_obj = iter(fruits)
+while True:
+    try:
+        fruit = next(iter_obj)
+        print(fruit)
+    except StopIteration:
+        break
+
+# The break statement in Python brings control out of the loop.
+
 
 
 # match qwe:
@@ -344,18 +455,6 @@ else:
 #         pass
 #     case _:
 #         pass
-
-
-# FOR loop 
-for _ in types:
-    pass
-
-for _ in types:
-    break
-else:
-    pass
-    
-    
 
 
 # Conditions, Control Flow. --------------------------------------------------------------------------------------------------------------------------------------------------> 
