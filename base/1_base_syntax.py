@@ -110,6 +110,26 @@ Type Casting: Often refers specifically to explicit conversion, where the conver
 # Basic Operators 
 # OPERATORS: These are the special symbols. Eg- + , * , /, etc.
 # OPERAND: It is the value on which the operator is applied.
+# 1) Difference between == and is: == cравнивает значения объекта, is сравнивает ссылки. !ВАЖНО! для при глубоком копировании неизменяемых объектов ссылки не будут изменятся 
+a = [1, 2, 3]
+b = [1, 2, 3]
+c = a
+
+print(a == b)  # True, because the lists 'a' and 'b' have the same values
+print(a is b)  # False, because 'a' and 'b' are different objects in memory
+print(a is c)  # True, because 'a' and 'c' point to the same object in memory
+name = ['alex', 'motalex']
+# True
+
+wildCard: для неизменяемых типов, значения которых равны питон для скорости работы будет ссылаться на один и тот же участок памяти. ID оъеста тоже одинаковы. 
+a = 5 
+b = 5
+print(memoryview(bytes(a)))
+print(memoryview(bytes(b)))
+print(a is b)
+# <memory at 0x0000020AA5CCDD80>
+# <memory at 0x0000020AA5CCDD80> 
+# True
 
 # Precedence of Arithmetic Operators in Python
 # The precedence of Arithmetic Operators in Python is as follows:
@@ -239,7 +259,6 @@ min = "a is minimum" if a < b else "b is minimum"  #
 
 a = not True
 print("Test True") if a is True else  print("test2")
-
 # Ternary Operator in Python --------------------------------------------------------------------------------------------------------------------------------------------------> 
 
 
@@ -264,7 +283,8 @@ print(x)  # Output will be 6  TODO CHECK id(x)
 # Basic Operators 
 ------------------------------------------------------------------------------------------------------------------
 
-# Conditions
+
+# Conditions, Control Flow. --------------------------------------------------------------------------------------------------------------------------------------------------> 
 if i := d.get(''):
     pass
 elif not (q := d.get(1)):
@@ -290,6 +310,20 @@ else:
     pass
 
 
+
+# While loop
+while a:
+    a.pop()
+
+while a:
+    break
+else:
+    pass
+
+# Conditions --------------------------------------------------------------------------------------------------------------------------------------------------> 
+
+
+
 # List Comprehensions
 a = [i for i in types]
 b = (i for i in types)
@@ -302,17 +336,7 @@ d = {str(i): i for i in types}
 assert h, 'test'
 
 
-# While loop
-while a:
-    a.pop()
-
-while a:
-    break
-else:
-    pass
-
-
-# Functions
+# Functions --------------------------------------------------------------------------------------------------------------------------------------------------> 
 def func(text: str, space: str, action: typing.Callable) -> None:
     if not text:
         return
@@ -339,7 +363,7 @@ Why should we use lambdas?
 1. Краткость, 2. анонимность (не нужно объявлять громоздкий def), 3. Использование внутри функций:
 
  Лучшее применения когда мы используем лямбду в другой функции.
-# lambda func
+# lambda func --------------------------------------------------------------------------------------------------------------------------------------------------> 
 
 
 # Decorators
