@@ -21,14 +21,16 @@ What is "self" - self в Python — это ссылка на текущий эк
 What __dict__ attribute means -  __dict__ представляет собой словарь, который хранит все атрибуты и их значения для конкретного экземпляра класса
 How to declare a class
 How to inherit from a class - существует Single и множественное наследование, Класс может наследоваться от нескольких классов, то Пайтон будет использовать: 
-MRO — Method Resolution Order) для определения, какой метод будет вызван. 
+
+
+
 
 
 Difference between class and an instance of it
 """
 import typing
 
-
+"""
 # Classes are defined in CamelCase How to declare a class
 # class ClassName: 
 #    <body>
@@ -38,7 +40,8 @@ import typing
 # Даже если у нас и есть возможность устанавливать аттрибуты класса в теле класса, __init__
 
 # How to inherit from a class - 
-# # Parent class
+"""
+# Parent class
 class Animal:
     def speak(self):
         return "Animal sound"
@@ -49,7 +52,10 @@ class Dog(Animal):
         return "Woof!"
 
 
-
+"""
+Множественное наследование
+# MRO — Method Resolution Order) для определения, какой метод будет вызван. Вы можете узнать порядок разрешения методов, используя атрибут __mro__ или метод mro() для любого класса:
+"""
 class A:
 
     class_attrs = None
