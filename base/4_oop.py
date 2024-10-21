@@ -2,26 +2,52 @@
 OOP. Classes and inheritance, super, magic methods, etc.
 
 Основные принципы ООП включают инкапсуляцию, наследование, полиморфизм и абстракцию. 
-Инкапсуляция скрывает внутренние детали реализации и защищает данные, предоставляя доступ через методы. 
-Наследование позволяет создавать новые классы на основе существующих, а полиморфизм позволяет использовать один и тот же интерфейс для объектов разных классов. 
-Абстракция упрощает сложные системы, скрывая ненужные детали и выделяя ключевые характеристики.
 
 OOPs Concepts in Python
+
 Class in Python
-Objects in Python
-Polymorphism in Python
-Encapsulation in Python
-Inheritance in Python
-Data Abstraction in Python
+
+В Python класс — это шаблон или чертёж для создания объектов. 
+Objects in Python - Объекты — это конкретные экземпляры класса, которые могут содержать данные (атрибуты) и функции (методы), связанные с этими данными
+
+Polymorphism in Python - полиморфизм позволяет использовать один и тот же интерфейс для объектов разных классов.
+Encapsulation in Python - Инкапсуляция скрывает внутренние детали реализации и защищает данные, предоставляя доступ через методы
+Inheritance in Python - аследование позволяет создавать новые классы на основе существующих
+Data Abstraction in Python - Абстракция упрощает сложные системы, скрывая ненужные детали и выделяя ключевые характеристики.
+
 
 What is a class
-What is "self"
-What __dict__ attribute means
+What is "self" - self в Python — это ссылка на текущий экземпляр класса. указатель на текущий объект. 
+What __dict__ attribute means -  __dict__ представляет собой словарь, который хранит все атрибуты и их значения для конкретного экземпляра класса
 How to declare a class
-How to inherit from a class
+How to inherit from a class - существует Single и множественное наследование, Класс может наследоваться от нескольких классов, то Пайтон будет использовать: 
+MRO — Method Resolution Order) для определения, какой метод будет вызван. 
+
+
 Difference between class and an instance of it
 """
 import typing
+
+
+# Classes are defined in CamelCase How to declare a class
+# class ClassName: 
+#    <body>
+# _protected - Защищённые атрибуты предназначены для внутреннего использования в классе и его подклассах, но не скрываются как приватные.
+# __private - В Python нет настоящих приватных переменных, поэтому манглирование имён — это способ предотвратить случайный доступ или изменение атрибута извне класса или в подклассах.
+
+# Даже если у нас и есть возможность устанавливать аттрибуты класса в теле класса, __init__
+
+# How to inherit from a class - 
+# # Parent class
+class Animal:
+    def speak(self):
+        return "Animal sound"
+
+# Child class inheriting from Animal
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+
 
 
 class A:
@@ -93,5 +119,5 @@ class QWE(C, D):
 if __name__ == '__main__':
     qwe = QWE()
     qwe.main()
-    print(QWE.mro())
+    print(QWE.__mro__())
     print(dir(QWE))

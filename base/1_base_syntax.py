@@ -55,7 +55,7 @@ There are two type of types of Type Casting:
 - Explicit - Явное приведение
 - Python Implicit Type Conversion и неявное приедение типов.
 
-Implicit Type Casting happens under the hood 
+# Implicit Type Casting happens under the hood 
 # There can be two types of Type Casting: Explicit and Implicit
 # Implicit
 a = 1
@@ -70,8 +70,8 @@ c = 1j
 print(type(c))
 # complex
 
-Explicit type - требует явного вмешательства пользователя
-Mainly type casting can be done with these data type functions:
+# Explicit type - требует явного вмешательства пользователя
+# Mainly type casting can be done with these data type functions:
 # key=casting
 int(): Python Int() function take float or string as an argument and returns int type object.
 float(): Python float() function take int or string as an argument and return float type object.
