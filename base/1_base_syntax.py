@@ -504,6 +504,7 @@ def func(text: str, space: str, action: typing.Callable) -> None:
 # @classmethod - используется для работы с атрибутами класса,  Class Method - методы определяются декоратором @classmethod как и их первый параметр cls, Метод класса — это метод, привязанный к классу , а не к объекту класса.
 # У них есть доступ к состоянию класса, поскольку он принимает параметр класса, указывающий на класс, а не на экземпляр объекта.
 # Он может изменить состояние класса, которое будет применяться ко всем экземплярам класса. Например, он может изменить переменную класса, которая будет применяться ко всем экземплярам.
+# 
 сlass Car:
     car_count = 0
     
@@ -523,6 +524,22 @@ car1 = Car('Toyota', 'Camry', 2020)
 car2 = Car('Honda', 'Accord', 2021)
 
 print(Car.total_cars())  # Вывод: Total cars: 2
+
+
+# Вызовы родтельских методово 
+class Animal:
+    def sound(self):
+        return "Some generic animal sound"
+
+class Dog(Animal):
+    def sound(self):
+        # Используем super() для вызова метода родителя
+        parent_sound = super().sound()
+        return f'{parent_sound}, but also: Woof woof!'
+
+# Экземпляр класса Dog использует метод sound, который вызывает родительский метод
+dog = Dog()
+print(dog.sound())  # Вывод: Some generic animal sound, but also: Woof woof!
 
 
 
