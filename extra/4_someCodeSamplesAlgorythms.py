@@ -131,3 +131,13 @@ index = 6
 index = (index - 1) % len(players)
 
 print(index)
+
+
+class A:
+
+    @staticmethod
+    def test():
+        print(f"i was called by")
+
+a = A()
+a.test()
