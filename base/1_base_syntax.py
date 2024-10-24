@@ -5,6 +5,10 @@ import typing
 
 ------------------------------------------------------------------------------------------------------------------>
 # Basic Data Types
+"""
+Типы данных в питоне делятся на два типа изменяемые list, dict, set а также пользовательские классы
+int, byte, string, tuple, bool
+"""
 types = [
     ...,
     None,
@@ -50,7 +54,7 @@ range(start, stop, step)
 """
 Приведение типов = это процес преобразования одного типа данных в другой. 
 Есть два вида Неявный - когда интерпретатор может преобразовать Типы данных неявно, и Явный, когда мы должны указать тип в который мы хотим привести данные. 
-"""
+
 There are two type of types of Type Casting: 
 - Explicit - Явное приведение
 - Python Implicit Type Conversion и неявное приедение типов.
@@ -58,6 +62,7 @@ There are two type of types of Type Casting:
 # Implicit Type Casting happens under the hood 
 # There can be two types of Type Casting: Explicit and Implicit
 # Implicit
+"""
 a = 1
 print(type(a))
 # integer
@@ -120,6 +125,11 @@ print(a is b)  # False, because 'a' and 'b' are different objects in memory
 print(a is c)  # True, because 'a' and 'c' point to the same object in memory
 name = ['alex', 'motalex']
 # True
+
+copy and deepcopy
+# Copy - creates a new object that refers to old object - all changes are reflected on origin object
+# deepcopy - A deep copy creates a new object and recursively copies all objects found in the original,
+# meaning that the new object is entirely independent of the original.
 
 wildCard: для неизменяемых типов, значения которых равны питон для скорости работы будет ссылаться на один и тот же участок памяти. ID оъеста тоже одинаковы. 
 a = 5 
@@ -184,12 +194,6 @@ _ = a not b
 # In Python, is and is not are the identity operators both are used to check if two values are located on the same part of the memory. 
 # Two variables that are equal do not imply that they are identical. 
 
-copy and deepcopy
-# Copy - creates a new object that refers to old object - all changes are reflected on origin object
-# deepcopy - A deep copy creates a new object and recursively copies all objects found in the original,
-# meaning that the new object is entirely independent of the original.
-
-
 is          True if the operands are identical 
 is not      True if the operands are not identical 
 
@@ -201,44 +205,6 @@ True
 
 print(a is not b)
 print(a is c)
-
-
-
-
-# Python – Star or Asterisk operator ( * )  
-#Одинарная звёздочка (*)
-#В аргументах функций: Используется для передачи переменного количества аргументов. Аргументы будут собраны в кортеж.
-def my_function(*args):
-    for arg in args:
-        print(arg)
-
-my_function(1, 2, 3)  # Выводит: 1, 2, 3
-#При распаковке: Позволяет распаковывать итерируемые объекты в функции и списки.
-numbers = [1, 2, 3]
-print(*numbers) 
-# using asterisk
-def addition(*args):
-  return sum(args)
-
-print(addition(5, 10, 20, 6))
-
-
-# Двойная звёздочка (**)
-В аргументах функций: Используется для передачи переменного количества именованных аргументов. Аргументы будут собраны в словарь.
-def my_function(**kwargs):
-    for key, value in kwargs.items():
-        print(f"{key}: {value}")
-
-my_function(a=1, b=2)  # Выводит: a: 1, b: 2
-
-# Присвоение, распаковка, slice 
-e, *f, g = types
-h = [*f]
-_ = [1, 2, 3][:]
-_ = {**{}}
-=======
-# Python – Star or Asterisk operator ( * )  
-
 
 #Difference between ‘and’ and ‘&’ in Python 
 and - is logical
@@ -291,7 +257,7 @@ print(x)  # Output will be 6  TODO CHECK id(x)
 
 
 
-
+"""
 # Conditions, Control Flow. --------------------------------------------------------------------------------------------------------------------------------------------------> 
 # Conditional statements in Python play a key role in determining the direction of program execution.
 
@@ -300,7 +266,7 @@ print(x)  # Output will be 6  TODO CHECK id(x)
 # Python Nested If Statement
 # Python Elif
 # Ternary Statement | Short Hand If Else Statement
-
+"""
 if i := d.get(''):
     pass
 elif not (q := d.get(1)):
@@ -320,7 +286,7 @@ if i < 15: print("i is less than 15")
 Syntax :  [on_true] if [expression] else [on_false] 
 Syntax: true_value if condition else false_value
 
-
+"""
 # LOOPS
 # what are the different types of control statements in Python?
 # In Python, control statements are used to alter the flow of execution based on specific conditions or looping requirements. The main types of control statements are:
@@ -329,7 +295,7 @@ Syntax: true_value if condition else false_value
 # -- Control flow statements: break, continue, pass, return
 # Difference between for loop and while loop in Python
 # while зацыкленно выполняет кусок кода, фор нужен для интеации
-
+"""
 
 # while (key=WHILE)
 while expression:
@@ -364,7 +330,7 @@ while a:
 else:
     pass
 
-
+"""
 # For is used for sequential traversal. Использует для обхода последовательности.
 # Последовательность - это упорядоченные коллеции элементов, под упорядоченными имеется ввиду остортированные.
 # - Последовательности: string, list, set, tuple, dict 
@@ -374,6 +340,7 @@ else:
 # FOR loop 
 # The underscore _ is often used as a variable name when you want to indicate that the variable is a placeholder and its value is not needed. 
 # This is a common Python convention when the loop variable is not used.
+"""
 for _ in types:
     pass
 
@@ -492,6 +459,7 @@ assert h, 'test'
 # 3) default def greet(name, age=30):
 # 4) *args собирает все позиционные аргументы в кортеж.
 # 5) **kwargs собирает все именованные аргументы в словарь.
+# 6) yield, return, global, nonlocal
 """
 def func(text: str, space: str, action: typing.Callable) -> None:
     if not text:
@@ -501,10 +469,21 @@ def func(text: str, space: str, action: typing.Callable) -> None:
     func(text[1:], space + ' ', action)
     print(space + action(text))
 
+# @staticmethod
+"""
+Может быть вызван по имени класса, без создания объекта, и также поддерживает вызов через объкт класса
+"""
+@staticmethod
+def hello(name):
+    return f"Hello, {name}"
+
+
+# @classmethod
+""" 
 # @classmethod - используется для работы с атрибутами класса,  Class Method - методы определяются декоратором @classmethod как и их первый параметр cls, Метод класса — это метод, привязанный к классу , а не к объекту класса.
 # У них есть доступ к состоянию класса, поскольку он принимает параметр класса, указывающий на класс, а не на экземпляр объекта.
 # Он может изменить состояние класса, которое будет применяться ко всем экземплярам класса. Например, он может изменить переменную класса, которая будет применяться ко всем экземплярам.
-# 
+"""
 сlass Car:
     car_count = 0
     
@@ -517,7 +496,7 @@ def func(text: str, space: str, action: typing.Callable) -> None:
     # Метод класса
     @classmethod
     def total_cars(cls):
-        return f'Total cars: {cls.car_count}'
+        return f'Total cars: {cls.car_count}'  
     
 # Создаем два экземпляра
 car1 = Car('Toyota', 'Camry', 2020)
@@ -526,7 +505,7 @@ car2 = Car('Honda', 'Accord', 2021)
 print(Car.total_cars())  # Вывод: Total cars: 2
 
 
-# Вызовы родтельских методово 
+# Вызовы родтельских методов
 class Animal:
     def sound(self):
         return "Some generic animal sound"
@@ -541,6 +520,35 @@ class Dog(Animal):
 dog = Dog()
 print(dog.sound())  # Вывод: Some generic animal sound, but also: Woof woof!
 
+# *args **kwargs
+"""
+# Python – Star or Asterisk operator ( * ) 
+# *args собирает все позиционные аргументы в кортеж.
+# **kwargs собирает все именованные аргументы в словарь.
+"""
+#Одинарная звёздочка (*)
+#В аргументах функций: Используется для передачи переменного количества аргументов. Аргументы будут собраны в кортеж.
+def my_function(*args):
+    for arg in args:
+        print(arg)
+
+my_function(1, 2, 3)  # Выводит: 1, 2, 3
+#При распаковке: Позволяет распаковывать итерируемые объекты в функции и списки.
+numbers = [1, 2, 3]
+print(*numbers) 
+# using asterisk
+def addition(*args):
+  return sum(args)
+
+print(addition(5, 10, 20, 6))
+
+# Двойная звёздочка (**)
+В аргументах функций: Используется для передачи переменного количества именованных аргументов. Аргументы будут собраны в словарь.
+def my_function(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+my_function(a=1, b=2)  # Выводит: a: 1, b: 2
 
 
 # lambda func 
