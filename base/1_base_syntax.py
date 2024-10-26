@@ -651,6 +651,29 @@ try/finally:
 
 """
 try:
+    print(f"{10/0}")
+except DivisionByZero as zero:
+    precedence("Oh no you are dumb")
+
+"""
+try/except/else/finally
+"""
+def try_except_else_finally():
+    try:
+        print(f"{10 / 2}")
+    except:
+        print("EXECPTioN is here")  # выполнится, если try c исключениями
+    else:
+        print("there are no erros") # выполнится, если try без исключений
+    finally:
+        print(f"{try_except_else_finally.__name__} finished") # выпаолнятеся всегда
+
+try_except_else_finally()
+"""
+try/except/else/finally
+"""
+
+try:
     1 / 0
 except ZeroDivisionError as exc:
     pass
