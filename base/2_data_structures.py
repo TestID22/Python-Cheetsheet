@@ -4,6 +4,16 @@ Basic data structures
 # 1. How to create / modify / delete
 # 2. Modifiable / immutable objects
 # 3. Basic methods of basic structures
+
+# String formatting
+"""
+STRINGS
+1) Конкатенация соединение строк "" + ""
+2) OTP = 123 msg = """ Hello %s, %d """ % (username, OTP)
+3) Using .format method
+4) F-String in Python
+"""
+
 a = []
 a = list()
 a = [1] * 10
@@ -12,6 +22,19 @@ a = [*a]
 a.append(a)
 a.pop()
 a.extend(a)
+
+# using % 
+OTP = 123
+name = "Alex"
+message = """Hello %s, %d"""% (name, OTP)
+print(message)
+
+# using .format()
+text = "text {0} + {1}".format('Alex', 2)
+print(text)
+
+# f string
+test = f"{variable_name} or {func_name}"
 
 # Strings are IMUTABLE date types
 How to check 
@@ -128,7 +151,7 @@ txt = "\x48\x65\x6c\x6c\x6f"
 print(txt) 
                                                       String
 ------------------------------------------------------------------------------------------------------------------
-
+"""
 
 
 
