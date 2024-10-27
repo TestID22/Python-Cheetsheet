@@ -650,13 +650,17 @@ try/finally:
 - Чаще используется для освобождения ресурсов, Блок finally часто применяется для освобождения ресурсов, закрытия файлов, завершения соединений с базами данных и других задач, которые должны быть выполнены в любом случае.
 
 """
+
+
 try:
     print(f"{10/0}")
 except DivisionByZero as zero:
-    precedence("Oh no you are dumb")
+    print("Oh no you are dumb")
+
 
 """
 try/except/else/finally
+try -> except -> else -> finally
 """
 def try_except_else_finally():
     try:
@@ -726,3 +730,5 @@ class B(A):
     def get_test() -> str:
         return 'test'
 # Class
+
+

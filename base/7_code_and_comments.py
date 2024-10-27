@@ -15,23 +15,58 @@
 # 11) Переменные названы в соответствии с их смыслом, по-английски, нет однобуквенных названий и транслита.
 
 # Comments
-# 1) What are the comments
+"""
+# 1) What are the comments - краткое описание кода для улучшение читаемости кода. 
+- Улучшенеие читаемости кода. 
+- Поясняет что делает метод или строками
+- Облегчает понимание кода, после долгого срока
+- переиспользование кода
+
 
 # 2) How to write a comment
+- короткие
+- избегать очевидных 
+- описывай общую работу функции
+- хороший камент говорит сам за себя
+- не пиши лишние комментарии
+
+
+1) Single-Line Comments. Single-line comments begin with the “#” character.
+2) Multi-Line Comments
+3) Triple quotes (''''' or '""')
+4) Docstrings __doc__
 
 # 3) When do we need to write a comment
-
+Advantages of Comments in Python
+1) Поможет понять всем кто будет юзать код, как он работает
+2) Хорошо написанный коммент, важно для тех кто будет его использовать.
+3) Улушает работу в команде.
+4) Помогает устранять неполадки
+5) Контроль кода - помогает дебажить кода
+6) Поянсение логики сложных алгоритмов. Причины использования разных частей кода.
+7) Поддержка кода
+8) Преиспользование кода
+9) Передача Опыта
+10) Изучить свой стиль кода
+"""
+# end of comments
 # Conventions and style-checkers
 
-# 1) What are style check tools
 
-# 2) How to use style check tools
+# Conventions and style-checkers
+"""
+pep8 is a tool to check your Python code against some of the style conventions in PEP8
+- Flake8
+- pep8 
+# 1) What are style check tools - тулы которые помогают придерживаться хорошему стилю кода
 
+# 2) How to use style check tools - в зависимости о прилаги, я бы как хук в гит установил
+"""
 # Проектирование
 # YAGNI You Aren’t Gonna Need It / Вам это не понадобится
 # Неиспользуемый код удаляется, а не комментируется или висит мёртвым грузом
 
-# DRY Don’t Repeat / Не повторяйтесь
+# DRY Don’t Repeat Yourself / Не повторяйтесь
 # Не должно быть одинаковых классов / функций / больших кусков кода, делающих одно и то же
 
 # KISS Keep It Simple, Stupid / Будь проще
