@@ -1,9 +1,15 @@
 """
-Basic data structures
+Basic data structures and Strings
 """
 # 1. How to create / modify / delete
 # 2. Modifiable / immutable objects
 # 3. Basic methods of basic structures
+
+# 1) What Data structures consist of
+
+# 2) What's the purpose of Data structures
+
+# 3) Differences between different structures: List, Dictionary, Set, FrozenSet, Tuple, String, Bytearray
 
 # String formatting
 """
@@ -14,14 +20,6 @@ STRINGS
 4) F-String in Python
 """
 
-a = []
-a = list()
-a = [1] * 10
-a = [1, 2, 3] + [3, 4, 5]
-a = [*a]
-a.append(a)
-a.pop()
-a.extend(a)
 
 # using % 
 OTP = 123
@@ -37,11 +35,11 @@ print(text)
 test = f"{variable_name} or {func_name}"
 
 # Strings are IMUTABLE date types
-How to check 
+#How to check 
 name = "Pavel"
-print(f'Id of the first objectL {id(name}")
+print(f"Id of the first objectL {id(name)}")
 name = "test"
-print(f" it's another object: {id(name}")
+print(f" it's another object: {id(name)}")
 
 # Access by index. Accessing elements of String
 a = "Hello, World!"
@@ -149,24 +147,60 @@ print(txt)
 #A backslash followed by an 'x' and a hex number represents a hex value:
 txt = "\x48\x65\x6c\x6c\x6f"
 print(txt) 
-                                                      String
+#                                                      String
 ------------------------------------------------------------------------------------------------------------------
+
+
+
+# LIST 
 """
+ Структуры Данных - Коллекции объектов
+ Список упорядоченная, остортированная коллекция
+ Содержат объекты любого вида
+ Элементы доступны по индексу
+ Изменяемый тип данных.
+ представляют собой массив ссылок на объекты
+ help(list) dir(list)
+"""
+a = []
+a = list()
+a = [1] * 10
+a = [1, 2, 3] + [3, 4, 5]
+a = [*a]
+a.append(a) - add a single object even if this is list
+a.pop() 
+a.extend(a) - concatanate list 
+a.sort()
+a.copy() - create shallow copy 
+a.reverse()
+a.index()
+a.count()
+a.clear()
+del a[i:j]
+a[1] = value
+list(map(ord, 'spam'))
 
-
-
-
-
+# end of LIST
 
 # TUPLE
-
+"""
+коллекция неизменяемых объектов
+содрежит коллекцию разных объектов
+ПРИМЕЧАНИЕ: чтоб создать кортеж с одним объектом нужно поставить запятую после объекта
+"""
 b = (1, 2, a)
+b = (obj,)
 b = tuple([1, 2])
 b = b[:]
 b, _ = b
 # TUPLE
 
 # SET 
+"""
+Это неупорядоченная коллекция данных, которая является изменяемой и не допускает дублирования элементов
+Sets в основном используются для проверки членства и устранения дублирующихся записей
+Структура данных, используемая в этом случае, — это хеширование, популярный метод для выполнения вставки, удаления и обхода в среднем за O(1)
+"""
 c = {1, 2}
 d = set([1, 2])
 c.add(3)
@@ -177,9 +211,23 @@ _ = c | d
 _ = c & d
 _ = frozenset(c)
 # SET
+# FrozenSet
 
+# FrozenSet
+
+# Dicitonary
+"""
+похож на хеш таблицы, с временной сложностю O(1)
+Неупорядоченная коллеция пар ключ - значение
+Доступ осуществляется через ключи
+изменяемый тип данных
+Ключ это любой хешируемый объект т.е. любой неизменяемый объект
+поддерживает создание генератором словаря
+"""
 d = dict(none123=None)
 d = {None: None, **d}
+myDict = {x: x**2 for x in [1,2,3,4,5]}
+print(myDict)
 d[1] = 1
 d = d | {2: 2}
 _ = d.setdefault(3, 3)

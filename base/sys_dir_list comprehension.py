@@ -19,6 +19,12 @@ message = """Hello %s, %d"""% (name, OTP)
 print(message)
 
 # using .format()
-
 text = "text {0} + {1}".format('Alex', 2)
 print(text)
+
+
+l = list(range(1, 11))
+print(l)
+
+l.extend(l)
+print(l)
