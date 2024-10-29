@@ -5,9 +5,9 @@ Basic data structures and Strings
 # 2. Modifiable / immutable objects
 # 3. Basic methods of basic structures
 
-# 1) What Data structures consist of
+# 1) What Data structures consist of (из встроенных и кастомных данных)
 
-# 2) What's the purpose of Data structures
+# 2) What's the purpose of Data structures - хранить наборы объектов. 
 
 # 3) Differences between different structures: List, Dictionary, Set, FrozenSet, Tuple, String, Bytearray
 
