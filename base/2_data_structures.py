@@ -149,9 +149,72 @@ txt = "\x48\x65\x6c\x6c\x6f"
 print(txt) 
 #                                                      String
 ------------------------------------------------------------------------------------------------------------------
+https://www.geeksforgeeks.org/python-data-structures/
 
-
+1) list - осортированный массив ссылок на объекты,
+    arr = ['I', 'love', 'you']
+2) dict - словарь, основанный на хеш таблицах. is like hash tables with time complexity of O(1)
+    dict = {'name': obj }
+3) range - is immutabble sequence of numbers, 
+   range(1, 5, 2) # start, stop, step
+4) tuple - is imutabble collection. elements in the tuple cannot be added or removed once created.
+    screen_resolution = (1920, 1200)
+5) set - is unordered collection of data that is mutable and does not allow any duplocate element.
+    test = set([1, 1, 2, 3])
+6) frozenset- (cant add or remove obkects, hashable, ) are imutablle objects that only support mettda and operator that produce a resuilt without affecting sets pr sets.
+    frozenset(["e", "f", "g"])
+7) string - is immutable array of characters 
+    name = 'I love a1qa" 
+8) bytearray - givesd a muttable sequnce of integers 0 <=x < 256 
+   a = bytearray((12, 8, 25, 2))
+   """
+   Collections Module
+   from collections import defaultdict
+   """
+9) Counters
+10) OrderedDict
+11) DefaultDict
+12) ChainMap - A ChainMap encapsulates many dictionaries into a single unit
+13) NamedTuple
+14) Deque
+15) UserDict
+16) UserList
+17) UserString
+18) Linked List
+19) Linked List Traversal 
+20) Stack
+21) Queue
+22) Priority Queue
+23) Heap queue (or heapq)
+24) Binary Tree
+25) Tree Traversal
+26) Graph
+27) Adjacency List
+28) Graph Traversal
 
+""" How to Choose the Right Data Structure in Python?
+
+Access Speed:
+Lists provide O(1) time complexity for indexing.
+Dictionaries provide O(1) time complexity for key lookup.
+Insertion and Deletion:
+Lists have O(n) time complexity for insertion and deletion in the worst case.
+Sets and dictionaries have O(1) time complexity for insertion and deletion.
+Order:
+Lists and tuples maintain the order of elements.
+Sets and dictionaries (in Python 3.7+) maintain insertion order, but typically sets are considered unordered collections.
+Uniqueness:
+Sets ensure all elements are unique.
+Lists and tuples allow duplicate elements.
+Mutability:
+If you need to modify the data structure after creation, use mutable structures like lists or dictionaries.
+For fixed collections of items, use immutable structures like tuples or frozensets
+"""
+
+
+
+
+
 # LIST 
 """
  Структуры Данных - Коллекции объектов
