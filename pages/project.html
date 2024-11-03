@@ -1,8 +1,55 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
 
-<body>
+<body class="scrollable">
     <h5>Building a project</h5>
+    <h5>1) How to add a library using pip and requirements.txt</h5>
+    <div class="text block_info">
+        <ul>
+            <p>pip -m install package_name <span class="comment"> установить новую либу</span>
+            <p>pip list <span class="comment"> показать спискок библиотек</span>
+            <p>py -m pip list <span class="comment"></span>
+            <p>py -m pip search "query" <span class="comment"></span>
+            <p>pip freze > requirements.txt <span class="comment"></span>
+            <p>pip install -r requirements.txt <span class="comment"></span>
+        </ul>
+    </div>
+    <div class="text block_info">
+        <p class="text">constraints.txt file is used to specify upper or lower bounds for package versions.</p>
+        <p class="code">- py -m pip install -c constraints.txt</p>
+        <p class="code">- py -m pip install -c constraints.txt requests numpy</p>
+        <p class="code">#constraints.txt</p>
+        <p class="code"># Django>=3.0,</p>
+        <p class="code"># 4.0 requests==2.26.0</p>
+        <p class="code"># numpy<=1.21.0 </p>
+    </div>
+    <h5>2) How to install and configure python interpreter
+        PyCharm</h5>
+    <div class="text block_info">
+        <article>
+            2)
+            When creating a new project, it will ask for the Python interpreter.
+            <p>You can configure it from File > Settings > Project: "project_name" > Python Interpreter
+            </p>
+            VENV:
+            это изолированное цифровое пространство, в котором вы можете установить свои собственные версии Python и
+            пакеты,
+            отличные от тех, которые установлены в системе. Используется для изоляции зависимостей:
+            <p class="code">
+            <p class="code">#myenv - is your env's name
+            <p class="code">python -m venv myenv</p>
+
+            # to activate env:
+            <p class="code"> \venv\scripts\activate
+        </article>
+    </div>
+    <h5>3) How to Uninstall a package</h5>
+    <div class="block_info">
+        <p><span class="code">python -m pip uninstall some_package</span></p>
+        <p><span class="code">python -m pip list --outdated</span> <span class="comment">- display a list of packages
+                that have a newer version available </span>
+    </div>
 </body>
 
 </html>
