@@ -52,7 +52,7 @@ valid_nicknames = [i for i in nicknames if re.match(pattern, i)]
 # Working with files
 # 1) Libraries and classes for reading/writing text files
 # 2) Serialization/Deserialization of xml/json
-    with - это контекстый менеджер
+    with - это контекстый менеджер. 
 """
 # Работа с файлами
 # some_dict = {'qwe': 123}
