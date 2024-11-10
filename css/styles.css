@@ -117,6 +117,10 @@ a {
     background-color: grey;
 }
 
+.block_info.p.comment {
+    color: #f6e482d1;
+}
+
 .text {
     color: #ffffffd1;
 }
@@ -125,8 +129,14 @@ a {
     color: #8af7de;
 }
 
+
+
 .comment {
     color: #f6e482d1;
+}
+
+.title {
+    color: rgb(110, 204, 255);
 }
 
 .scrollable {

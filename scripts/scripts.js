@@ -6,8 +6,8 @@ function loadPage(page) {
         pageUrl = 'pages/project.html';
     } else if (page === 'lambda') {
         pageUrl = 'pages/lambda.html';
-    } else if (page === 'services') {
-        pageUrl = 'services.html';
+    } else if (page === 'types_casting') {
+        pageUrl = 'pages/types_casting.html';
     } else if (page === 'contact') {
         pageUrl = 'contact.html';
     }
