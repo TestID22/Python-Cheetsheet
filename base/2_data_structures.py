@@ -299,4 +299,12 @@ d.pop(1)
 d.items()
 d.keys()
 d.values()
+  dictionary sorting using Lambda
+sort_me = [{'age': 10001}, {'age': 23}]
+sort_me.sort(key=lambda sort_me: sort_me['age'])
+print(sort_me)
+
+
 # ...
+
+
